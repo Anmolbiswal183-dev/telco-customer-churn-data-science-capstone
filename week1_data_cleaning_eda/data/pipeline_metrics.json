@@ -1,0 +1,199 @@
+{
+  "overview": {
+    "total_records": 7043,
+    "total_features": 22,
+    "churn_count": 1869,
+    "retained_count": 5174,
+    "overall_churn_rate_pct": 26.54
+  },
+  "numeric_statistics": {
+    "tenure": {
+      "mean": 32.37,
+      "std": 24.56,
+      "median": 29.0,
+      "iqr": 46.0,
+      "min": 0.0,
+      "max": 72.0,
+      "skewness": 0.24,
+      "outliers_count_iqr": 0
+    },
+    "MonthlyCharges": {
+      "mean": 64.76,
+      "std": 30.09,
+      "median": 70.35,
+      "iqr": 54.35,
+      "min": 18.25,
+      "max": 118.75,
+      "skewness": -0.22,
+      "outliers_count_iqr": 0
+    },
+    "TotalCharges": {
+      "mean": 2279.73,
+      "std": 2266.79,
+      "median": 1394.55,
+      "iqr": 3388.05,
+      "min": 0.0,
+      "max": 8684.8,
+      "skewness": 0.96,
+      "outliers_count_iqr": 0
+    }
+  },
+  "grouped_by_churn": {
+    "tenure": {
+      "No": {
+        "mean": 37.57,
+        "median": 38.0,
+        "std": 24.11
+      },
+      "Yes": {
+        "mean": 17.98,
+        "median": 10.0,
+        "std": 19.53
+      }
+    },
+    "MonthlyCharges": {
+      "No": {
+        "mean": 61.27,
+        "median": 64.43,
+        "std": 31.09
+      },
+      "Yes": {
+        "mean": 74.44,
+        "median": 79.65,
+        "std": 24.67
+      }
+    },
+    "TotalCharges": {
+      "No": {
+        "mean": 2549.91,
+        "median": 1679.53,
+        "std": 2329.95
+      },
+      "Yes": {
+        "mean": 1531.8,
+        "median": 703.55,
+        "std": 1890.82
+      }
+    }
+  },
+  "categorical_breakdown": {
+    "Contract": [
+      {
+        "Contract": "Month-to-month",
+        "total": 3875,
+        "churn_count": 1655,
+        "churn_rate": 42.71
+      },
+      {
+        "Contract": "One year",
+        "total": 1473,
+        "churn_count": 166,
+        "churn_rate": 11.27
+      },
+      {
+        "Contract": "Two year",
+        "total": 1695,
+        "churn_count": 48,
+        "churn_rate": 2.83
+      }
+    ],
+    "InternetService": [
+      {
+        "InternetService": "DSL",
+        "total": 2421,
+        "churn_count": 459,
+        "churn_rate": 18.96
+      },
+      {
+        "InternetService": "Fiber optic",
+        "total": 3096,
+        "churn_count": 1297,
+        "churn_rate": 41.89
+      },
+      {
+        "InternetService": "No",
+        "total": 1526,
+        "churn_count": 113,
+        "churn_rate": 7.4
+      }
+    ],
+    "TechSupport": [
+      {
+        "TechSupport": "No",
+        "total": 3473,
+        "churn_count": 1446,
+        "churn_rate": 41.64
+      },
+      {
+        "TechSupport": "No internet service",
+        "total": 1526,
+        "churn_count": 113,
+        "churn_rate": 7.4
+      },
+      {
+        "TechSupport": "Yes",
+        "total": 2044,
+        "churn_count": 310,
+        "churn_rate": 15.17
+      }
+    ],
+    "SeniorCitizen": [
+      {
+        "SeniorCitizen": "No",
+        "total": 5901,
+        "churn_count": 1393,
+        "churn_rate": 23.61
+      },
+      {
+        "SeniorCitizen": "Yes",
+        "total": 1142,
+        "churn_count": 476,
+        "churn_rate": 41.68
+      }
+    ],
+    "PaymentMethod": [
+      {
+        "PaymentMethod": "Bank transfer (automatic)",
+        "total": 1544,
+        "churn_count": 258,
+        "churn_rate": 16.71
+      },
+      {
+        "PaymentMethod": "Credit card (automatic)",
+        "total": 1522,
+        "churn_count": 232,
+        "churn_rate": 15.24
+      },
+      {
+        "PaymentMethod": "Electronic check",
+        "total": 2365,
+        "churn_count": 1071,
+        "churn_rate": 45.29
+      },
+      {
+        "PaymentMethod": "Mailed check",
+        "total": 1612,
+        "churn_count": 308,
+        "churn_rate": 19.11
+      }
+    ]
+  },
+  "hypothesis_tests": {
+    "chi2_contract_vs_churn": {
+      "chi2_stat": 1184.6,
+      "p_value": 5.86e-258,
+      "degrees_of_freedom": 2,
+      "significant": true
+    },
+    "mann_whitney_tenure": {
+      "u_stat": 7154668.0,
+      "p_value": 2.42e-208,
+      "significant": true
+    },
+    "welch_ttest_monthly_charges": {
+      "t_stat": -18.41,
+      "p_value": 8.59e-73,
+      "significant": true
+    }
+  }
+}

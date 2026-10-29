@@ -1,0 +1,13 @@
+{
+  "total_subscribers": 7043,
+  "total_arr_portfolio": 5473399.2,
+  "total_arr_churn_loss": 1669570.2,
+  "churn_arr_percentage": 30.5,
+  "fiber_subscribers": 3096,
+  "fiber_churn_rate_pct": 41.89,
+  "fiber_arr_at_risk": 1371600.6,
+  "fiber_churn_no_support_pct": 49.37,
+  "fiber_churn_with_support_pct": 22.63,
+  "projected_arr_recovery_support": 627840.32,
+  "early_tenure_churn_share_pct": 41.95
+}

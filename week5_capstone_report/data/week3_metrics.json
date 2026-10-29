@@ -1,0 +1,263 @@
+{
+  "hypothesis_1_pricing": {
+    "n_churned": 1869,
+    "n_retained": 5174,
+    "mean_churned": 74.44,
+    "mean_retained": 61.27,
+    "median_churned": 79.65,
+    "median_retained": 64.43,
+    "std_churned": 24.67,
+    "std_retained": 31.09,
+    "mean_difference": 13.18,
+    "ci_95_diff": [
+      11.77,
+      14.58
+    ],
+    "welch_t_stat": 18.408,
+    "welch_df": 4135.8,
+    "p_value_welch_one_sided": 4.3e-73,
+    "mann_whitney_u": 6003125.5,
+    "p_value_mann_whitney": 1.66e-54,
+    "cohens_d": 0.446,
+    "levene_stat": 361.844,
+    "levene_p_value": 1.03e-78,
+    "reject_null": true
+  },
+  "hypothesis_2_contract_anova": {
+    "group_means": {
+      "Month-to-month": 18.04,
+      "One year": 42.04,
+      "Two year": 56.74
+    },
+    "group_stds": {
+      "Month-to-month": 17.69,
+      "One year": 19.03,
+      "Two year": 18.2
+    },
+    "f_statistic": 2960.02,
+    "df_between": 2,
+    "df_within": 7040,
+    "p_value_anova": 0.0,
+    "kruskal_wallis_h": 3139.24,
+    "p_value_kruskal": 0.0,
+    "eta_squared": 0.457,
+    "tukey_pairwise": [
+      {
+        "group1": "Month-to-month",
+        "group2": "One year",
+        "meandiff": 24.01,
+        "p_adj": 0.0,
+        "ci_lower": 22.71,
+        "ci_upper": 25.31,
+        "reject": true
+      },
+      {
+        "group1": "Month-to-month",
+        "group2": "Two year",
+        "meandiff": 38.7,
+        "p_adj": 0.0,
+        "ci_lower": 37.46,
+        "ci_upper": 39.93,
+        "reject": true
+      },
+      {
+        "group1": "One year",
+        "group2": "Two year",
+        "meandiff": 14.69,
+        "p_adj": 0.0,
+        "ci_lower": 13.18,
+        "ci_upper": 16.2,
+        "reject": true
+      }
+    ],
+    "reject_null": true
+  },
+  "hypothesis_3_tech_support_chisquare": {
+    "contingency_counts": {
+      "No_Support_Churned": 1101,
+      "No_Support_Retained": 1129,
+      "Yes_Support_Churned": 196,
+      "Yes_Support_Retained": 670
+    },
+    "churn_rate_no_support_pct": 49.37,
+    "churn_rate_yes_support_pct": 22.63,
+    "risk_ratio": 2.18,
+    "chi2_statistic": 182.12,
+    "degrees_of_freedom": 1,
+    "p_value_chi2": 1.67e-41,
+    "fisher_odds_ratio": 0.3,
+    "p_value_fisher": 1.06e-43,
+    "odds_ratio": 3.33,
+    "ci_95_odds_ratio": [
+      2.79,
+      3.99
+    ],
+    "cramers_v": 0.243,
+    "reject_null": true
+  },
+  "hypothesis_4_logistic_regression": {
+    "log_likelihood": -3025.2,
+    "ll_null": -4075.07,
+    "pseudo_r2_mcfadden": 0.2576,
+    "llr_p_value": 0.0,
+    "aic": 6068.4,
+    "bic": 6130.14,
+    "total_observations": 7043,
+    "coefficients": [
+      {
+        "term": "Intercept",
+        "coef": -3.4495,
+        "std_err": 0.2048,
+        "z_stat": -16.84,
+        "p_val": 1.17e-63,
+        "odds_ratio": 0.032,
+        "ci_95_or": [
+          0.021,
+          0.047
+        ],
+        "significant": true
+      },
+      {
+        "term": "C(Contract, Treatment(reference='Two year'))[T.Month-to-month]",
+        "coef": 1.7848,
+        "std_err": 0.1682,
+        "z_stat": 10.61,
+        "p_val": 2.71e-26,
+        "odds_ratio": 5.958,
+        "ci_95_or": [
+          4.285,
+          8.285
+        ],
+        "significant": true
+      },
+      {
+        "term": "C(Contract, Treatment(reference='Two year'))[T.One year]",
+        "coef": 0.8659,
+        "std_err": 0.1732,
+        "z_stat": 5.0,
+        "p_val": 5.73e-07,
+        "odds_ratio": 2.377,
+        "ci_95_or": [
+          1.693,
+          3.338
+        ],
+        "significant": true
+      },
+      {
+        "term": "C(PaymentMethod, Treatment(reference='Credit card (automatic)'))[T.Bank transfer (automatic)]",
+        "coef": 0.0672,
+        "std_err": 0.1118,
+        "z_stat": 0.6,
+        "p_val": 0.548,
+        "odds_ratio": 1.069,
+        "ci_95_or": [
+          0.859,
+          1.331
+        ],
+        "significant": false
+      },
+      {
+        "term": "C(PaymentMethod, Treatment(reference='Credit card (automatic)'))[T.Electronic check]",
+        "coef": 0.5302,
+        "std_err": 0.095,
+        "z_stat": 5.58,
+        "p_val": 2.37e-08,
+        "odds_ratio": 1.699,
+        "ci_95_or": [
+          1.411,
+          2.047
+        ],
+        "significant": true
+      },
+      {
+        "term": "C(PaymentMethod, Treatment(reference='Credit card (automatic)'))[T.Mailed check]",
+        "coef": -0.0466,
+        "std_err": 0.1119,
+        "z_stat": -0.42,
+        "p_val": 0.677,
+        "odds_ratio": 0.954,
+        "ci_95_or": [
+          0.766,
+          1.189
+        ],
+        "significant": false
+      },
+      {
+        "term": "C(SeniorCitizen, Treatment(reference='No'))[T.Yes]",
+        "coef": 0.4039,
+        "std_err": 0.0811,
+        "z_stat": 4.98,
+        "p_val": 6.27e-07,
+        "odds_ratio": 1.498,
+        "ci_95_or": [
+          1.278,
+          1.755
+        ],
+        "significant": true
+      },
+      {
+        "term": "tenure",
+        "coef": -0.0355,
+        "std_err": 0.0021,
+        "z_stat": -16.9,
+        "p_val": 4.52e-64,
+        "odds_ratio": 0.965,
+        "ci_95_or": [
+          0.961,
+          0.969
+        ],
+        "significant": true
+      },
+      {
+        "term": "MonthlyCharges",
+        "coef": 0.0243,
+        "std_err": 0.0014,
+        "z_stat": 16.95,
+        "p_val": 2.01e-64,
+        "odds_ratio": 1.025,
+        "ci_95_or": [
+          1.022,
+          1.028
+        ],
+        "significant": true
+      }
+    ]
+  },
+  "vif_diagnostics": [
+    {
+      "feature": "tenure",
+      "vif": 6.88,
+      "multicollinear": true
+    },
+    {
+      "feature": "MonthlyCharges",
+      "vif": 3.7,
+      "multicollinear": false
+    },
+    {
+      "feature": "TotalCharges",
+      "vif": 9.75,
+      "multicollinear": true
+    },
+    {
+      "feature": "SeniorCitizen_Yes",
+      "vif": 1.09,
+      "multicollinear": false
+    },
+    {
+      "feature": "Contract_M2M",
+      "vif": 3.09,
+      "multicollinear": false
+    },
+    {
+      "feature": "Contract_1Yr",
+      "vif": 1.65,
+      "multicollinear": false
+    },
+    {
+      "feature": "Payment_ECheck",
+      "vif": 1.26,
+      "multicollinear": false
+    }
+  ]
+}
